@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magia Sin Filtros | Yanira Mendoza</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mystic: {
+                            900: '#11102A', // Azul noche muy oscuro
+                            800: '#1C1A42', // Índigo oscuro
+                            100: '#E6E6FA', // Lavanda suave
+                        },
+                        gold: {
+                            400: '#FBBF24', // Dorado brillante
+                            500: '#F59E0B', // Ámbar cálido
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Lato', sans-serif; background-color: #11102A; }
+        h1, h2, h3, .font-serif { font-family: 'Playfair Display', serif; }
+        html { scroll-behavior: smooth; }
+        /* Efecto de carta de tarot flotante */
+        .tarot-card:hover { transform: translateY(-10px); box-shadow: 0 20px 25px -5px rgba(251, 191, 36, 0.1), 0 10px 10px -5px rgba(251, 191, 36, 0.04); }
+    </style>
+</head>
+<body class="text-mystic-100 antialiased selection:bg-gold-500 selection:text-mystic-900">
+
+    <nav class="fixed w-full z-50 top-0 bg-mystic-900/80 backdrop-blur-md border-b border-mystic-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0">
+                    <a href="#" class="font-serif text-2xl font-bold text-gold-400 tracking-widest uppercase text-sm">Magia Sin Filtros</a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#filosofia" class="text-gray-300 hover:text-gold-400 transition duration-300">Filosofía</a>
+                    <a href="#lecturas" class="text-gray-300 hover:text-gold-400 transition duration-300">Lecturas</a>
+                    <a href="#galeria" class="text-gray-300 hover:text-gold-400 transition duration-300">Inspiración</a>
+                    <a href="#contacto" class="border border-gold-500 text-gold-400 px-6 py-2 rounded-full hover:bg-gold-500 hover:text-mystic-900 transition duration-300">Reserva tu sesión</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="menuBtn" class="text-gold-400 focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-mystic-800 border-t border-mystic-800 absolute w-full">
+            <a href="#filosofia" class="block px-4 py-4 text-gray-300 hover:bg-mystic-900 hover:text-gold-400">Filosofía</a>
+            <a href="#lecturas" class="block px-4 py-4 text-gray-300 hover:bg-mystic-900 hover:text-gold-400">Lecturas</a>
+            <a href="#galeria" class="block px-4 py-4 text-gray-300 hover:bg-mystic-900 hover:text-gold-400">Inspiración</a>
+            <a href="#contacto" class="block px-4 py-4 text-gold-400 font-bold hover:bg-mystic-900">Reserva tu sesión</a>
+        </div>
+    </nav>
+
+    <section class="relative pt-32 pb-20 px-4 min-h-screen flex items-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-cover bg-center opacity-40" style="background-image: url('images/1000017942.jpg');"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-mystic-900/60 via-mystic-900/80 to-mystic-900"></div>
+        </div>
+
+        <div class="max-w-4xl mx-auto relative z-10 text-center space-y-8">
+            <h2 class="text-gold-500 font-medium tracking-[0.3em] uppercase text-sm md:text-base">Por Yanira Mendoza</h2>
+            <h1 class="text-5xl md:text-7xl font-serif font-bold text-white leading-tight">
+                Magia <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold-400 to-yellow-200">Sin Filtros</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-300 font-light leading-relaxed max-w-2xl mx-auto">
+                El Tarot no adivina tu futuro, te ayuda a crearlo. Conecta con la energía de tu alma y encuentra la claridad que ya reside en ti.
+            </p>
+            <div class="pt-8">
+                <a href="#lecturas" class="inline-block bg-gold-500 text-mystic-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-gold-400 hover:shadow-[0_0_20px_rgba(251,191,36,0.5)] transition duration-300">
+                    Descubre las Cartas
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="filosofia" class="py-24 px-4 relative">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="relative rounded-t-full rounded-b-3xl overflow-hidden shadow-[0_0_40px_rgba(28,26,66,1)] border border-mystic-800">
+                <img src="images/1000017943.jpg" alt="Lectura de Tarot" class="w-full h-auto object-cover opacity-80 hover:opacity-100 transition duration-500">
+            </div>
+            
+            <div class="space-y-6">
+                <div class="w-16 h-1 bg-gold-500 mb-6"></div>
+                <h2 class="text-4xl font-serif text-white mb-6">Energía, Alma y Verdad</h2>
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    Vivimos rodeados de ruido. Las expectativas, los miedos y el día a día a veces nos desconectan de nuestra brújula interna. 
+                    <strong>Magia Sin Filtros</strong> nace como un espacio seguro para escuchar lo que tu alma ya sabe, pero tu mente no te deja oír.
+                </p>
+                <p class="text-lg text-gray-300 leading-relaxed">
+                    Mi enfoque con el Tarot es terapéutico y evolutivo. No busco decirte lo que quieres escuchar, sino lo que necesitas saber para desbloquear tu energía y tomar las riendas de tu vida.
+                </p>
+                <div class="pt-6">
+                    <p class="font-serif text-2xl text-gold-400 italic">"Eres el creador de tu propia magia."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="lecturas" class="py-24 px-4 bg-mystic-800 relative">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-serif text-white mb-4">Mis Lecturas</h2>
+                <p class="text-gray-400 text-lg">Elige la sesión que resuene con tu energía actual</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                
+                <div class="tarot-card bg-mystic-900 border border-mystic-700 p-8 rounded-2xl relative transition duration-300 flex flex-col items-center text-center group">
+                    <div class="w-20 h-20 rounded-full border border-gold-500/30 flex items-center justify-center mb-6 text-3xl group-hover:bg-gold-500/10 transition">🌙</div>
+                    <h3 class="text-2xl font-serif text-gold-400 mb-3">Lectura de Claridad</h3>
+                    <p class="text-sm text-gray-400 mb-6 uppercase tracking-widest">30 Minutos</p>
+                    <p class="text-gray-300 leading-relaxed mb-8">Ideal para resolver dudas concretas o tomar una decisión importante. Una mirada directa y sin filtros a tu situación actual.</p>
+                    <div class="mt-auto w-full">
+                        <a href="#contacto" class="block w-full border border-gold-500 text-gold-400 py-3 rounded-full hover:bg-gold-500 hover:text-mystic-900 transition font-semibold">Reservar</a>
+                    </div>
+                </div>
+
+                <div class="tarot-card bg-gradient-to-b from-mystic-900 to-mystic-800 border border-gold-500/50 p-8 rounded-2xl relative transition duration-300 flex flex-col items-center text-center transform md:-translate-y-6 shadow-[0_0_30px_rgba(251,191,36,0.1)] group">
+                    <div class="absolute -top-4 bg-gold-500 text-mystic-900 px-4 py-1 rounded-full text-xs font-bold tracking-wider uppercase">Más Elegida</div>
+                    <div class="w-20 h-20 rounded-full border border-gold-500/30 flex items-center justify-center mb-6 text-3xl group-hover:bg-gold-500/10 transition">✨</div>
+                    <h3 class="text-2xl font-serif text-gold-400 mb-3">Guía Evolutiva</h3>
+                    <p class="text-sm text-gray-400 mb-6 uppercase tracking-widest">60 Minutos</p>
+                    <p class="text-gray-300 leading-relaxed mb-8">Una sesión profunda. Analizamos bloqueos energéticos, patrones que se repiten y el camino que tu alma te pide seguir.</p>
+                    <div class="mt-auto w-full">
+                        <a href="#contacto" class="block w-full bg-gold-500 text-mystic-900 py-3 rounded-full hover:bg-gold-400 transition font-bold shadow-lg">Reservar</a>
+                    </div>
+                </div>
+
+                <div class="tarot-card bg-mystic-900 border border-mystic-700 p-8 rounded-2xl relative transition duration-300 flex flex-col items-center text-center group">
+                    <div class="w-20 h-20 rounded-full border border-gold-500/30 flex items-center justify-center mb-6 text-3xl group-hover:bg-gold-500/10 transition">👁️</div>
+                    <h3 class="text-2xl font-serif text-gold-400 mb-3">Lectura de Vínculos</h3>
+                    <p class="text-sm text-gray-400 mb-6 uppercase tracking-widest">45 Minutos</p>
+                    <p class="text-gray-300 leading-relaxed mb-8">Enfocada en entender la energía entre tú y otra persona (pareja, familia, amistades). Qué vienes a aprender de esa conexión.</p>
+                    <div class="mt-auto w-full">
+                        <a href="#contacto" class="block w-full border border-gold-500 text-gold-400 py-3 rounded-full hover:bg-gold-500 hover:text-mystic-900 transition font-semibold">Reservar</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="py-24 px-4 bg-mystic-900">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif text-white mb-4">Inspiración Diaria</h2>
+                <p class="text-gray-400">Un vistazo a mi mundo y mi energía</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div class="col-span-2 row-span-2 overflow-hidden rounded-xl border border-mystic-700 relative group">
+                    <img src="images/1000017944.jpg" alt="Inspiración Tarot" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                    <div class="absolute inset-0 bg-mystic-900/20 group-hover:bg-transparent transition duration-500"></div>
+                </div>
+                <div class="overflow-hidden rounded-xl border border-mystic-700 relative group aspect-square">
+                    <img src="images/1000017945.jpg" alt="Energía" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                </div>
+                <div class="overflow-hidden rounded-xl border border-mystic-700 relative group aspect-square">
+                    <img src="images/1000017946.jpg" alt="Cristales" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                </div>
+                <div class="col-span-2 overflow-hidden rounded-xl border border-mystic-700 relative group h-48">
+                    <img src="images/1000017947.jpg" alt="Magia" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-700">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto" class="bg-black py-16 px-4 border-t border-mystic-800">
+    <div class="max-w-5xl mx-auto text-center">
+        <h2 class="text-3xl font-serif text-gold-400 mb-6">¿Lista para escuchar a tu alma?</h2>
+        <p class="text-gray-400 mb-10 max-w-xl mx-auto">Mándame un mensaje directo para agendar tu lectura o consultar disponibilidad. Las sesiones se realizan online por videollamada.</p>
+        
+        <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 mb-12">
+            <a href="mailto:info.yanira.mendoza@gmail.com" class="flex items-center text-gray-300 hover:text-gold-400 transition">
+                <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                info.yanira.mendoza@gmail.com
+            </a>
+            
+            <span class="hidden sm:inline text-mystic-700">|</span>
+            
+            <a href="https://www.instagram.com/magiasinfiltros" target="_blank" class="flex items-center text-gray-300 hover:text-gold-400 transition">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.20 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                @magiasinfiltros
+            </a>
+
+            <span class="hidden sm:inline text-mystic-700">|</span>
+
+            <a href="https://wa.me/697447499" target="_blank" class="flex items-center text-gray-300 hover:text-gold-400 transition">
+                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12c0 1.78.47 3.44 1.28 4.93L2 22l5.24-1.22A9.952 9.952 0 0011.99 22c5.52 0 10-4.48 10-10S17.51 2 11.99 2zM12 20c-1.55 0-3.03-.4-4.33-1.12l-.31-.18-3.15.74.84-3.02-.2-.33A7.957 7.957 0 014 12c0-4.41 3.59-8 8-8s8 3.59 8 8-3.59 8-8 8zm4.22-5.57c-.23-.12-1.37-.68-1.58-.76-.21-.08-.36-.12-.52.12-.15.23-.6.76-.73.91-.14.15-.28.17-.51.05-.23-.12-1.02-.38-1.95-1.2-.72-.64-1.2-1.43-1.34-1.66-.14-.23-.01-.35.1-.47.11-.11.23-.28.35-.42.11-.14.15-.23.23-.39.08-.15.04-.28-.02-.39-.06-.11-.52-1.25-.71-1.71-.19-.46-.38-.4-.52-.4h-.44c-.15 0-.4.06-.61.28-.21.23-.81.79-.81 1.93s.83 2.24.95 2.4c.11.15 1.63 2.5 3.96 3.5.56.24 1 .38 1.34.49.56.18 1.07.15 1.47.09.45-.07 1.37-.56 1.56-1.1.19-.54.19-1 .13-1.1-.06-.09-.21-.15-.44-.26z"/></svg>
+                WhatsApp
+            </a>
+        </div>
+        
+        <p class="text-mystic-700 text-sm">© 2026 Yanira Mendoza. Magia Sin Filtros.</p>
+    </div>
+</footer>
+
+    <script>
+        document.getElementById('menuBtn').addEventListener('click', function() {
+            document.getElementById('mobileMenu').classList.toggle('hidden');
+        });
+        // Cerrar menú al hacer click en un enlace
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobileMenu').classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
